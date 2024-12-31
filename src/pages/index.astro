@@ -1,11 +1,60 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Navbar from '../components/Server/Navbar/Navbar.astro';
+import HeroText from '../components/Server/HeroText/HeroText.astro';
+import Graf from '../components/Server/GrafImages/Graf.astro'
+import GrafanaProfits from '../components/Server/GrafanaProfits/GrafanaProfits.astro';
+import Services from '../components/Server/ServiceSection/Services.astro';
+import EndSection from '../components/Server/endSection/endSection.astro';
+import Description from '../components/Server/Description/Description.astro';
+
+import HeroSidePart from '../components/Client/HeroSidePart/HeroSidePart.tsx';
+
+import Footer from '../components/Server/Footer/Footer.astro';
+
 ---
 
 <Layout>
-	<Welcome />
+	<Navbar />
+	<main id="hero" >
+		<HeroText />
+		<HeroSidePart client:load/>
+	</main>
+	<section id="description" class="mt-28">
+		<Description />
+	</section>
+	<section id="grafana">
+		<Graf />
+	</section>
+	<section id="profits" class="mt-16">
+		<GrafanaProfits />
+	</section>
+	<section id="services">
+		<Services />
+	</section>
+	<section id="end-section">
+		<EndSection />
+	</section>
+	<Footer />
 </Layout>
+
+
+<style>
+	section {
+		opacity: 0; /* Initially invisible */
+		transform: translateY(50px); /* Start with a slight downward offset */
+		transition: opacity 0.6s ease, transform 0.6s ease;
+	}
+
+	section.fade-in {
+		opacity: 1; /* Fully visible */
+		transform: translateY(0); /* No offset */
+	}
+
+	section.fade-out {
+		opacity: 0; /* Fade out */
+		transform: translateY(-50px); /* Return to downward offset */
+	}
+	
+</style>

@@ -1,0 +1,80 @@
+---
+const menuButton1 : string = "Strona główna"
+const menuButton2 : string = "Szczegóły"
+const menuButton3 : string = "Usługi"
+const menuButton4 : string = "Kontakt"
+
+---
+
+<nav class="bg-white fixed w-full top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between md:justify-normal h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="/" class="text-gray-800 text-xl font-bold">
+          EnergyWiseSystems
+        </a>
+      </div>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex space-x-8 ml-32">
+        <a href="/" class="text-gray-800 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-200">
+          {menuButton1}
+        </a>
+        <a href="#description" class="text-gray-800 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-200">
+          {menuButton2}
+        </a>
+        <a href="#services" class="text-gray-800 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-200">
+          {menuButton3}
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button
+          id="menu-button"
+          class="text-gray-400 focus:outline-none focus:ring-2 focus:ring-white"
+        >
+          <span class="sr-only">Open menu</span>
+          <svg
+            id="icon-open"
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path stroke-Linecap="round" stroke-Linejoin="round" stroke-Width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          <svg
+            id="icon-close"
+            class="h-6 w-6 hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path stroke-Linecap="round" stroke-Linejoin="round" stroke-Width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a href="/" class="block text-gray-800 px-3 py-2 rounded-md text-base font-medium hover:bg-gray-200">
+        {menuButton1}
+      </a>
+      <a href="#description" class="block text-gray-800 px-3 py-2 rounded-md text-base font-medium hover:bg-gray-200">
+        {menuButton2}
+      </a>
+      <a href="#services" class="block text-gray-800 px-3 py-2 rounded-md text-base font-medium hover:bg-gray-200">
+        {menuButton3}
+      </a>
+    </div>
+  </div>
+</nav>

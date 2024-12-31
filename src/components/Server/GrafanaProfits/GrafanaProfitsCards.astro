@@ -1,0 +1,60 @@
+---
+const benefits = [
+  {
+    title: 'Zaawansowane wizualizacje danych',
+    description:
+      'Grafana pozwala na tworzenie interaktywnych i zaawansowanych wizualizacji danych, takich jak wykresy, tabele, mapy ciepła czy wykresy liniowe, co pozwala na łatwą interpretację złożonych danych.',
+  },
+  {
+    title: 'Obsługa wielu źródeł danych',
+    description:
+      'Grafana wspiera różnorodne źródła danych, takie jak Prometheus, InfluxDB, MySQL, PostgreSQL, ElasticSearch i wiele innych, co czyni ją elastycznym narzędziem do monitorowania różnych systemów i aplikacji.',
+  },
+  {
+    title: 'Dostosowywalne dashboardy',
+    description:
+      'Grafana umożliwia tworzenie dostosowanych dashboardów, które mogą być łatwo edytowane i udostępniane. Dzięki elastyczności dashboardów, można dostosować widoki do potrzeb zespołów technicznych oraz menedżerskich.',
+  },
+  {
+    title: 'Zintegrowane panelowanie i filtrowanie',
+    description:
+      'Grafana pozwala na łatwe filtrowanie i panelowanie danych na dashboardzie, co umożliwia użytkownikom szybkie znajdowanie istotnych informacji. Można zdefiniować filtry, które pomagają w bardziej precyzyjnej analizie danych.',
+  },
+  {
+    title: 'Open-source',
+    description:
+      "Grafana jest open-source'owym narzędziem, co oznacza, że jest dostępna za darmo, a także pozwala na modyfikację i dostosowywanie do własnych potrzeb, co daje dużą elastyczność.",
+  },
+  {
+    title: 'Łatwość konfiguracji i użytkowania',
+    description:
+      'Grafana posiada prosty interfejs użytkownika, który sprawia, że jest łatwa w konfiguracji i użytkowaniu, nawet dla osób, które nie mają doświadczenia z zaawansowanymi narzędziami monitorującymi.',
+  },
+];
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 p-8 xl:px-64">
+  {benefits.map((benefit, index) => (
+    <div class="bg-white rounded-lg shadow-lg p-6 border border-gray-200 space-y-4 benefit-card" >
+      <div class="flex items-center justify-center bg-orange-200 text-orange-500 w-10 h-10 rounded-full text-xl font-bold mx-auto">
+        {index + 1}
+      </div>
+      <h3 class="font-semibold text-lg text-center text-gray-700">{benefit.title}</h3>
+      <p class="text-gray-500">{benefit.description}</p>
+    </div>
+  ))}
+</div>
+
+
+<style>
+  .benefit-card {
+    transform: translateX(5%);
+    transition: transform 1s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+  }
+
+  .benefit-card.slide-in {
+    transform: translateX(0);
+    opacity: 1;
+  }
+</style>

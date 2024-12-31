@@ -1,0 +1,66 @@
+---
+const services = [
+  {
+    title: 'Instalacja Grafany',
+    description:
+      'Zajmujemy się instalacją i konfiguracją platformy Grafana, dostosowaną do Twoich potrzeb monitorowania danych.',
+    icon: '🔧',
+  },
+  {
+    title: 'Integracja z infrastrukturą klienta',
+    description:
+      'Oferujemy kompleksową integrację Grafany z istniejącą infrastrukturą, zapewniając spójność danych i bezproblemową współpracę systemów.',
+    icon: '🌐',
+  },
+  {
+    title: 'Instalacja bazy danych',
+    description:
+      'Instalujemy i konfigurujemy bazy danych takie jak InfluxDB czy MariaDB, dostosowane do wymagań Twojego środowiska.',
+    icon: '💾',
+  },
+  {
+    title: 'Podpinanie domeny',
+    description:
+      'Pomagamy w podpięciu i konfiguracji domeny, aby Twoje aplikacje były dostępne pod preferowanymi adresami URL.',
+    icon: '🌍',
+  },
+  {
+    title: 'Programowanie',
+    description:
+      'Świadczymy usługi programistyczne, dostosowując rozwiązania do Twoich specyficznych potrzeb.',
+    icon: '💻',
+  },
+  {
+    title: 'Serwisowanie i wsparcie',
+    description:
+      'Oferujemy serwisowanie i wsparcie techniczne dla instalacji.',
+    icon: '🔧',
+  },
+  {
+    title: 'Instalacja narzędzi do opomiarowania energii',
+    description:
+      'Instalujemy i konfigurujemy narzędzia do pomiaru zużycia energii, co pozwala na monitorowanie zużycia oraz optymalizację kosztów.',
+    icon: '⚡',
+  },
+  {
+    title: 'Wsparcie i szkolenie',
+    description:
+      'Oferujemy kompleksowe wsparcie techniczne oraz szkolenia dla Twojego zespołu, pomagając w pełnym wykorzystaniu narzędzi oraz technologii.',
+    icon: '📚',
+  },
+];
+---
+
+<div class="space-y-10 p-8">
+  {services.map((service, index) => (
+    <div class="flex items-start space-x-4">
+      <div class="flex-shrink-0 text-xl text-blue-600">
+        <span>{service.icon}</span>
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg text-gray-800">{service.title}</h3>
+        <p class="text-gray-600 py-2">{service.description}</p>
+      </div>
+    </div>
+  ))}
+</div>

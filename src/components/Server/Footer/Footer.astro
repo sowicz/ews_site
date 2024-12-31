@@ -1,0 +1,106 @@
+---
+const email = "kontakt@ewsys.pl";
+---
+<footer class="bg-gray-800 text-white py-8 mt-32">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      {/* Contact Information */}
+      <div>
+        <h3 class="text-lg font-bold mb-4">Skontaktuj się</h3>
+        <ul>
+          <li class="mb-2">
+            <span class="font-bold">Email:</span>{' '}
+            <a
+              href=`mailto:${email}`
+              class="hover:text-gray-400"
+            >
+              {email}
+            </a>
+          </li>
+          <!-- <li class="mb-2">
+            <span class="font-bold">Phone:</span>{' '}
+            <a href="tel:+1234567890" class="hover:text-gray-400">
+              +1 234 567 890
+            </a>
+          </li> -->
+          <li>
+          </li>
+        </ul>
+      </div>
+      {/* About Section */}
+      <div>
+        <h3 class="text-lg font-bold mb-4">O nas</h3>
+        <p class="text-sm">
+          Dostarczamy rozwiązania w dziedzinie data engineeringu/DevOps. 
+          Oferujemy instalację naszej autorskiej webowej aplikacji, a także innych aplikacji dostosowanych do indywidualnych potrzeb klienta.
+        </p>
+      </div>
+
+      {/* Navigation Links */}
+      <div>
+        <h3 class="text-lg font-bold mb-4">Przejdź do</h3>
+        <ul>
+          <li class="mb-2">
+            <a href="/" class="hover:text-gray-400">
+              Home
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="#services" class="hover:text-gray-400">
+              Usługi
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="#description" class="hover:text-gray-400">
+              Szczegóły
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="#contact" class="hover:text-gray-400">
+              Kontakt
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    {/* Social Media Links */}
+    {/* <div class="mt-8 text-center">
+      <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+      <div class="flex justify-center space-x-4">
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-gray-400"
+        >
+          Facebook
+        </a>
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-gray-400"
+        >
+          Twitter
+        </a>
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-gray-400"
+        >
+          LinkedIn
+        </a>
+      </div>
+    </div> */}
+
+    {/* Footer Bottom */}
+    <div class="mt-8 text-center text-sm text-gray-500">
+      &copy; {new Date().getFullYear()} EnergyWiseSystems. All rights reserved.
+    </div>
+  </div>
+</footer>
+
